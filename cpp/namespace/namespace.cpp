@@ -28,7 +28,7 @@ int main()
   /*to specify which namespace to use*/
   std::cout << "This will actually print\n";
   //std is standard namespace defines inside iostream
-  custom::cout << "This will not print\n";
+  custom::cout << "This will not print anything\n";
 
   /*calling function*/
   use_std_cout("Hello World\n");
@@ -43,7 +43,11 @@ int main()
    * using namespace custom;
    * cout << "Hello World\n";
    * // This is because reference to ‘cout’ is ambiguous
-   */
+  */
+
+  /*Defining short names for namespace*/  
+  namespace cs = custom;
+  cs::cout << "This will not print anything\n";
 }
 
 
